@@ -1,0 +1,77 @@
+/* Todo Form Container */
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.todo-form:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+}
+
+/* Inputs */
+.todo-form input,
+.todo-form textarea {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-family: inherit;
+  transition: all 0.3s;
+  resize: none;
+}
+
+.todo-form input:focus,
+.todo-form textarea:focus {
+  outline: none;
+  border-color: #36a2eb;
+  box-shadow: 0 0 8px rgba(54, 162, 235, 0.3);
+}
+
+/* Textarea */
+.todo-form textarea {
+  min-height: 60px;
+}
+
+/* Submit Button */
+.todo-form button {
+  padding: 12px 0;
+  border-radius: 8px;
+  border: none;
+  background-color: #36a2eb;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.todo-form button:hover {
+  background-color: #2b82c9;
+}
+
+.todo-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .todo-form {
+    padding: 15px;
+  }
+
+  .todo-form input,
+  .todo-form textarea,
+  .todo-form button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

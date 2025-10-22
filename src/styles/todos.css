@@ -1,0 +1,220 @@
+
+
+/* =======================
+   Page Container
+======================= */
+.todos-page {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* =======================
+   Top Controls (Filters + Search + Analytics)
+======================= */
+.top-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.left-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Filters Buttons */
+.filters {
+  display: flex;
+  gap: 10px;
+}
+
+.filters button {
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: 1px solid #36a2eb;
+  background-color: white;
+  color: #36a2eb;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filters button:hover {
+  background-color: #36a2eb;
+  color: white;
+}
+
+.filters button.active {
+  background-color: #36a2eb;
+  color: white;
+}
+
+/* Search Input */
+.search input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.search input:focus {
+  outline: none;
+  border-color: #36a2eb;
+  box-shadow: 0 0 8px rgba(54, 162, 235, 0.3);
+}
+
+/* =======================
+   Analytics
+======================= */
+.analytics {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  min-width: 250px;
+  max-width: 300px;
+}
+
+/* =======================
+   Todo Form (already styled for uniformity)
+======================= */
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.todo-form:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+}
+
+.todo-form input,
+.todo-form textarea {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-family: inherit;
+  transition: all 0.3s;
+}
+
+.todo-form input:focus,
+.todo-form textarea:focus {
+  outline: none;
+  border-color: #36a2eb;
+  box-shadow: 0 0 8px rgba(54, 162, 235, 0.3);
+}
+
+.todo-form button {
+  padding: 12px 0;
+  border-radius: 8px;
+  border: none;
+  background-color: #36a2eb;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.todo-form button:hover {
+  background-color: #2b82c9;
+}
+
+/* =======================
+   Todos List
+======================= */
+.todos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.muted {
+  color: #888;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* =======================
+   Error Messages
+======================= */
+.error {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* =======================
+   Responsive
+======================= */
+@media (max-width: 768px) {
+  .top-controls {
+    flex-direction: column;
+  }
+
+  .analytics {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .todos-page {
+    padding: 0 10px;
+  }
+
+  .filters button, .search input, .todo-form input, .todo-form textarea, .todo-form button {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #36a2eb;
+  background: white;
+  color: #36a2eb;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #36a2eb;
+  color: white;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-weight: 500;
+}

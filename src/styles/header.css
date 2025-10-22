@@ -1,0 +1,85 @@
+/* Header Container */
+header.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #36a2eb;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Brand / Logo */
+header.header .brand a {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+header.header .brand a:hover {
+  opacity: 0.85;
+}
+
+/* Navigation Links */
+header.header nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Links */
+header.header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+header.header nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Logout Button Styled as Link */
+header.header .link-btn {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+header.header .link-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header.header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  header.header nav {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  header.header nav a,
+  header.header .link-btn {
+    flex: 1 1 auto;
+    text-align: center;
+    margin: 2px 0;
+  }
+}
